@@ -1,0 +1,17 @@
+[Unit]
+Description=Antigravity Sandbox - Detonacion automatica del payload (air-gapped)
+# Ordenar tras el arranque basico y las sesiones, pero NO 'After=multi-user.target'
+# (crearia un ciclo con WantedBy=multi-user.target). Asi el oneshot corre cuando
+# el sistema ya esta listo y luego apaga la VM.
+After=systemd-user-sessions.service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/sandbox/detonate.sh
+StandardOutput=journal+console
+TimeoutStartSec=300
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target

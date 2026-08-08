@@ -1,0 +1,18 @@
+# --- Build ---
+build/
+xdp_kern.o
+kern/vmlinux.h
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# --- Runtime / datos ---
+*.log
+logs/
+training_samples.jsonl
+hawkeye.db
+
+# mictlan/ trae su propio .gitignore para artefactos de VM/telemetría efímeros.

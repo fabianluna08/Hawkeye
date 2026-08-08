@@ -1,0 +1,19 @@
+{
+  "feature_names": [
+    "pps",
+    "bps",
+    "mean_iat_ms",
+    "syn_ratio",
+    "udp_ratio",
+    "icmp_ratio",
+    "pkt_count",
+    "unique_dports",
+    "tb_drop_ratio"
+  ],
+  "n_features": 9,
+  "threshold": 0.5,
+  "best_iteration": 59,
+  "best_auc": 0.9970369064268262,
+  "continuous_updates": 1,
+  "last_train_samples": 15820
+}

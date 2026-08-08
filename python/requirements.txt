@@ -1,0 +1,5 @@
+# Dependencias del pipeline de entrenamiento del modelo DDoS volumétrico.
+numpy
+pandas
+xgboost
+scikit-learn

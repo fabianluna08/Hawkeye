@@ -1,0 +1,33 @@
+# --- Python ---
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# --- Firecracker VM assets (large, regenerables) ---
+# Las imagenes base se regeneran con setup_firecracker.sh (kernel + rootfs base)
+# y setup_rootfs_wine.sh (rootfs aprovisionado con Wine/Xvfb/app senuelo).
+# rootfs.ext4 ~300MB y vmlinux.bin ~21MB: demasiado pesados para versionar directo.
+vm_data/*.ext4
+vm_data/vmlinux.bin
+
+# Discos COW efimeros de cada detonacion (se crean y destruyen por corrida)
+rootfs_*.ext4
+
+# --- Artefactos de runtime ---
+*.socket
+vm_config*.json
+sandbox_reports.jsonl
+captured_payloads/
+l7_capture/work/
+telemetry_out/
+*.log
+logs/
+
+# Slots de concurrencia de VMs (locks efimeros)
+.vm_slots/
+
+# El binario de firecracker se descarga con setup_firecracker.sh (~2.8MB)
+# Se deja versionable por comodidad; descomentar la linea para excluirlo:
+# firecracker

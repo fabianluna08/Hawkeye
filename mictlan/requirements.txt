@@ -1,0 +1,12 @@
+# Dependencias Python del sandbox (instalar en venv/)
+#   python -m venv venv && ./venv/bin/pip install -r requirements.txt
+#
+# Analisis estatico (reglas YARA de tipos/firmas)
+yara-python>=4.5
+
+# Reensamblado TCP / parseo de pcaps para la captura L7 (l7_capture/watcher.py).
+# Pure-python, sin root para parsear pcaps.
+dpkt>=1.9
+
+# NOTA: el monitor eBPF (monitor.py) usa 'bcc', que NO se instala por pip: viene
+# del sistema (paquete python3-bpfcc / bcc) y requiere root para adjuntar sondas.
