@@ -5,6 +5,8 @@ pueden compilar y correr sin el resto de la plataforma (CASCADA-4, el
 dashboard web y el agente cognitivo con LangChain/SHAP no están en este
 repo).
 
+fabianluna981@gmail.com
+
 ## Capa 1-2 — Detección y mitigación DDoS a velocidad de hardware
 
 * **`kern/xdp_kern.c`**: programa eBPF/XDP que filtra paquetes *antes* de que
