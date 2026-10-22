@@ -6,6 +6,8 @@ dashboard web y el agente cognitivo con LangChain/SHAP no están en este
 repo).
 
 fabianluna981@gmail.com
+ana.cristinajp0525@gmail.com
+ricoguerrerox@gmail.com
 
 ## Capa 1-2 — Detección y mitigación DDoS a velocidad de hardware
 
